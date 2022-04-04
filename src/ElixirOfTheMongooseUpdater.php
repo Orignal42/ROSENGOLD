@@ -1,10 +1,8 @@
 <?php
-
 namespace GildedRose;
 
-use GildedRose\ItemUpdater;
 
-class ConjuredItemCakeUpdater extends ItemUpdater{
+class ElixirOfTheMongooseUpdater extends ItemUpdater{
 
     public function updateQuality()
     {
@@ -14,12 +12,12 @@ class ConjuredItemCakeUpdater extends ItemUpdater{
         //     parent::updateQuality();
         // }
         parent::updateQuality();
-        parent::updateQuality();
+      
     }
     public function updateExpired()
     {
         parent::updateExpired();
-        parent::updateExpired();
+    
     }
 
 }

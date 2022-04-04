@@ -1,59 +1,60 @@
 <?php
 
-namespace App;
+namespace GildedRose;
 
 class ItemUpdater
 {
 
+    protected $item;
 
-    // augmenter la qualité
-    protected function increaseQuality()
+    function __construct($item)
     {
-        if ($this->item->quality < 50) {
-            $this->item->quality = $this->item->quality + 1;
-        }
+        $this->item = $item;
     }
-    // reduire la qualité
-    protected function decreaseQuality()
-    {
-        if ($this->item->quality > 0) {
-            $this->item->quality = $this->item->quality - 1;
-        }
-    }
-    // modifier la qualite
-    public function updateQuality()
-    {
-    $this->decreaseQuality();
-    }
-
-    // modifier la date
-    public function updateSellIn()
-    {
-        $this->item->sell_in=$this->item->sell_in-1;
-    }
-
-    // modifier
-    public function update()
-    {
-        $this->decreaseQuality();
-        $this->updateSellIn();
-        if ( $this -> item -> sell_in < 0)
-        {
-            $this->updateExpired();
-        }
-    }
-
-    // modifier expire
-    public function updateExpired()
-    {
-        $this->item->quality=0;
-        $this->decreaseQuality();
-
-    }
-
 
     public function __toString()
     {
         return "{$this->item}";
     }
+
+    public function decreaseQuality()
+    {
+        if ($this->item->quality > 0) {
+            $this->item->quality = $this->item->quality - 1;
+        }
+    }
+
+    public function updateSellIn()
+    {
+        $this->item->sell_in = $this->item->sell_in - 1;
+    }
+
+    public function updateQuality()
+    {
+        $this->decreaseQuality();
+    }
+    
+    public function update()
+    {
+        $this->updateQuality();
+        $this->updateSellIn();
+        if ($this->item->sell_in < 0) {
+            $this->updateExpired();
+        }
+    }
+    public function increaseQuality()
+    {
+        if ($this->item->quality < 50) {
+            $this->item->quality = $this->item->quality + 1;
+        }
+    }
+
+
+    public function updateExpired()
+    {
+        $this->decreaseQuality();
+    }
 }
+
+
+

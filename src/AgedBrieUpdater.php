@@ -1,10 +1,10 @@
 <?php
 
-namespace GildenRose;
+namespace GildedRose;
 
-use App\ItemUpdater;
+use GildedRose\ItemUpdater;
 
-class Brie extends ItemUpdater
+class AgedBrieUpdater extends ItemUpdater
 {
     public function updateQuality()
     {

@@ -1,6 +1,6 @@
 <?php
-
-use App\ItemUpdater;
+namespace GildedRose;
+use GildedRose\ItemUpdater;
 
 class BackstagePassUpdater extends ItemUpdater{
     public function updateQuality(){
