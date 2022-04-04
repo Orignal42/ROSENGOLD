@@ -27,4 +27,3 @@ class GoldenMasterTest extends \PHPUnit\Framework\TestCase {
 
 }
 
-?>

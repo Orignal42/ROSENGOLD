@@ -4,7 +4,8 @@ namespace GildedRose;
 
 use GildedRose\ItemUpdater;
 
-class ConjuredItemCakeUpdater extends ItemUpdater{
+class ConjuredItemCakeUpdater extends ItemUpdater
+{
 
     public function updateQuality()
     {
@@ -21,5 +22,4 @@ class ConjuredItemCakeUpdater extends ItemUpdater{
         parent::updateExpired();
         parent::updateExpired();
     }
-
 }

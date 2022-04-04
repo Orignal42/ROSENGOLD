@@ -33,7 +33,7 @@ class ItemUpdater
     {
         $this->decreaseQuality();
     }
-    
+
     public function update()
     {
         $this->updateQuality();
@@ -55,6 +55,3 @@ class ItemUpdater
         $this->decreaseQuality();
     }
 }
-
-
-

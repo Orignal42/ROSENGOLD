@@ -2,10 +2,11 @@
 
 namespace GildedRose;
 
-class SulfuraUpdater extends ItemUpdater{
+class SulfuraUpdater extends ItemUpdater
+{
 
-    public function update(){
+    public function update()
+    {
         // rien ne change
     }
 }
-
