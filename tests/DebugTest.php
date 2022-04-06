@@ -13,7 +13,9 @@ class DebugTest  extends TestCase
         $itemclassifier = new ItemClassifier();
         $item = new Item('test',24,50);
         $updater = $itemclassifier->categorize($item);
+        // pour le mettre à  jour
         $updater->updateQuality();
+
         self::assertEquals(49, $item->quality);
     }
 }

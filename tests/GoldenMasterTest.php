@@ -2,8 +2,6 @@
 
 namespace Tests;
 
-
-
 class GoldenMasterTest extends \PHPUnit\Framework\TestCase {
 
     function testGenerateOutput() {
@@ -26,4 +24,3 @@ class GoldenMasterTest extends \PHPUnit\Framework\TestCase {
     }
 
 }
-

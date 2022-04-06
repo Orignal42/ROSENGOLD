@@ -55,4 +55,8 @@ class ItemUpdater
     {
         $this->decreaseQuality();
     }
+    public static function resolve(Item $item): bool
+    {
+        return $item->name == "..";
+    }
 }

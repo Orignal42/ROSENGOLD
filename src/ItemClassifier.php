@@ -2,8 +2,6 @@
 
 namespace App;
 
-use App\ItemUpdater;
-
 class ItemClassifier
 {
 
@@ -23,7 +21,7 @@ class ItemClassifier
     public function categorize($item)
     {
         $updater = $this->resolveUpdaters($item);
-        var_dump(new $updater($item));
+        //        var_dump(new $updater($item));
         return new $updater($item);
     }
 
