@@ -1,6 +1,7 @@
 <?php
 
-namespace GildedRose;
+namespace App;
+use App\ItemClassifier;
 
 final class GildedRose
 {

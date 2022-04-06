@@ -1,8 +1,9 @@
 <?php
 
-namespace GildedRose;
+namespace App\Updaters;
 
-use GildedRose\ItemUpdater;
+use App\ItemUpdater;
+use App\item;
 
 class BackstagePassUpdater extends ItemUpdater
 {
@@ -19,5 +20,12 @@ class BackstagePassUpdater extends ItemUpdater
     public function updateExpired()
     {
         $this->item->quality = 0;
+    }
+    // public function resolve($item){
+    //     $this->item->name='Backstage passes to a TAFKAL80ETC concert';
+    // }
+    public static function resolve(Item $item): bool
+    {
+        return $item->name == "Backstage passes to a TAFKAL80ETC concert";
     }
 }

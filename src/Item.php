@@ -1,6 +1,6 @@
 <?php
 
-namespace GildedRose;
+namespace App;
 
 final class Item
 {

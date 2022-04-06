@@ -1,7 +1,7 @@
 <?php
 
-namespace App;
-use GildedRose\item;
+namespace Tests;
+
 
 
 class GoldenMasterTest extends \PHPUnit\Framework\TestCase {

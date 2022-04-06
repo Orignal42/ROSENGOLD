@@ -1,8 +1,9 @@
 <?php
 
-namespace GildedRose;
+namespace App\Updaters;
 
-use GildedRose\ItemUpdater;
+use App\ItemUpdater;
+use App\Item;
 
 class ConjuredItemCakeUpdater extends ItemUpdater
 {
@@ -22,4 +23,12 @@ class ConjuredItemCakeUpdater extends ItemUpdater
         parent::updateExpired();
         parent::updateExpired();
     }
+    // public function resolve($item){
+    //     $this->item->name='Conjured Mana Cake ';
+    // }
+    public static function resolve(Item $item): bool
+    {
+        return $item->name == "Conjured Mana Cake";
+    }
+    
 }

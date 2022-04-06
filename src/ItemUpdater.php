@@ -1,6 +1,7 @@
 <?php
 
-namespace GildedRose;
+namespace App;
+
 
 class ItemUpdater
 {

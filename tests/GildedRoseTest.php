@@ -1,11 +1,11 @@
 <?php
 
-declare(strict_types=1);
+// declare(strict_types=1);
 
 namespace Tests;
 
-use GildedRose\GildedRose;
-use GildedRose\Item;
+use App\GildedRose;
+use App\Item;
 use PHPUnit\Framework\TestCase;
 
 class GildedRoseTest extends TestCase
