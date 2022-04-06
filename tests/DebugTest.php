@@ -1,18 +1,19 @@
 <?php
 namespace Tests;
 
-use App\ItemClassifier;
 use App\Item;
+use App\ItemClassifier;
 use PHPUnit\Framework\TestCase;
 
 
 class DebugTest  extends TestCase
 {
-    public function testClassifier(): void
+    public function testClassifier():void
     {
-        $itemClassifier = new ItemClassifier();
-        $itemClassifier->resolveUpdaters(new Item("BrieTest", 10, 5));
+        $itemclassifier = new ItemClassifier();
+        $item = new Item('test',24,50);
+        $updater = $itemclassifier->categorize($item);
+        $updater->updateQuality();
+        self::assertEquals(49, $item->quality);
     }
-
-
 }

@@ -23,7 +23,8 @@ class ItemClassifier
     public function categorize($item)
     {
         $updater = $this->resolveUpdaters($item);
-        return new $updater;
+        var_dump(new $updater($item));
+        return new $updater($item);
     }
 
     public function resolveUpdaters($item)
